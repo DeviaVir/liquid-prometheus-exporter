@@ -8,6 +8,7 @@ RUN mkdir -p /go/src/github.com/DeviaVir/liquid-prometheus-exporter
 COPY . /go/src/github.com/DeviaVir/liquid-prometheus-exporter
 
 RUN cd /go/src/github.com/DeviaVir/liquid-prometheus-exporter \
+ && go mod vendor \
  && go build \
       -mod vendor \
       -o /go/bin/liquid-prometheus-exporter
